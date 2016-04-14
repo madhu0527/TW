@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:paddingLeft="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/taskDetailLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/checkBoxView"
+        android:paddingBottom="5dp" >
+
+        <TextView
+            android:id="@+id/tasksName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="task grp name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#343740" />
+
+        <TextView
+            android:id="@+id/dateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/createdByTxt"
+            android:layout_alignBottom="@+id/createdByTxt"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/createdByTxt"
+            android:text="Aug 15th"
+            android:textColor="#A4A8B1"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/cmntCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/createdByTxt"
+            android:layout_marginRight="15dp"
+            android:text="0"
+            android:textColor="#5B677D"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/comntImg"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@+id/cmntCount"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/cmntCount"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/createdByTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tasksName"
+            android:text="Madhu"
+            android:textColor="#A4A8B1"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+    <TextView
+            android:id="@+id/addTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/taskDetailLay"
+            android:text="+ Add Task"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/checkBoxView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center" >
+
+       <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

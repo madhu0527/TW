@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:background="#FFFFCC" >
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/actionbar_shadow"
+        android:gravity="center|left"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/backImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/newDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New document"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/addNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_selector"
+            android:padding="8dp"
+            android:layout_marginLeft="90dp"
+            android:text="Save"
+            android:textColor="#4169E1"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLineVertical"
+        android:layout_width="2dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/topBar"
+        android:layout_marginLeft="20dp"
+        android:background="#e0e0e0" />
+
+    <LinearLayout
+        android:id="@+id/lay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/topBar"
+        android:layout_toRightOf="@+id/viewLineVertical"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/titleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:hint="Untitled"
+            android:padding="5dp"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/contentTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:hint="Type your notes........."
+            android:padding="5dp"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     android:background="#fff"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/clickPepLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:gravity="left|center|bottom"
+        android:padding="5dp" >
+
+        <mobile.teamwave.design.RoundedImageView
+            android:id="@+id/imagePeople"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/profilepic"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/namePeopleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imagePeople"
+            android:paddingLeft="12dp"
+            android:text="MadhuSudhan"
+            android:textColor="#000"
+             />
+
+        <TextView
+            android:id="@+id/compnyNameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/namePeopleTxt"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/imagePeople"
+            android:paddingLeft="12dp"
+            android:text="Ds"
+            android:textColor="#000"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+</LinearLayout>

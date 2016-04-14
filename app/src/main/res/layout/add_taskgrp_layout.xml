@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:float="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/myPopLay"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/rounded_corner_signinpopup"
+    android:gravity="center" >
+
+    <RelativeLayout
+        android:id="@+id/lay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.wrapp.floatlabelededittext.FloatLabeledEditText
+            android:id="@+id/taskGrpNam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            float:fletPadding="5dp" >
+
+            <EditText
+                android:id="@+id/taskGrpName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="Give the list a title"
+                android:singleLine="true" />
+        </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+        <RelativeLayout
+            android:id="@+id/line1"
+            android:layout_width="fill_parent"
+            android:layout_height="0.8dp"
+            android:layout_below="@+id/taskGrpNam"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="5dp"
+            android:background="#ccc"
+            android:orientation="horizontal" >
+        </RelativeLayout>
+        <!-- add some padding -->
+
+        <com.wrapp.floatlabelededittext.FloatLabeledEditText
+            android:id="@+id/dicribeList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line1"
+            android:layout_marginLeft="15dp"
+            float:fletPadding="5dp" >
+
+            <!-- float:fletPadding="10dp" -->
+
+            <EditText
+                android:id="@+id/discTaskGrp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="Describe this list (optional)"
+                android:singleLine="true" />
+        </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+        <RelativeLayout
+            android:id="@+id/line"
+            android:layout_width="fill_parent"
+            android:layout_height="0.8dp"
+            android:layout_below="@+id/dicribeList"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="5dp"
+            android:background="#ccc"
+            android:orientation="horizontal" >
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:gravity="center|right"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp" >
+
+            <TextView
+                android:id="@+id/addTaskListTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/btn_selector"
+                android:padding="8dp"
+                android:text="Add task list"
+                android:textColor="#4169E1"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/cencelTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/btn_selector"
+                android:padding="8dp"
+                android:text="Cancel"
+                android:textColor="#4169E1"
+                android:textSize="16sp" />
+
+            <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+                android:id="@+id/pDialog1"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"
+                app:mlpb_enable_circle_background="false"
+                app:mlpb_progress_stoke_width="4dp"
+                app:mlpb_progress_text_visibility="invisible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

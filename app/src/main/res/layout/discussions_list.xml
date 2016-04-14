@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:paddingLeft="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/commentBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingTop="5dp"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/imglay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp" >
+
+            <mobile.teamwave.design.RoundedImageView
+                android:id="@+id/imageUser"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_launcher" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/createdName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/imglay"
+            android:lineSpacingExtra="2dp"
+            android:text="MadhuSudhan"
+            android:textColor="#2D3037"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/contentDetailTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createdName"
+            android:layout_toRightOf="@id/imglay"
+            android:lineSpacingExtra="2dp"
+            android:padding="5dp"
+            android:paddingLeft="12dp"
+            android:text="contentDetailTxt"
+            android:textColor="#bdbdbd" />
+
+        <TextView
+            android:id="@+id/timeTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contentDetailTxt"
+            android:layout_toRightOf="@id/imglay"
+            android:padding="5dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="11dp"
+            android:text="timeTxt"
+            android:textColor="#d7d2db" />
+    </RelativeLayout>
+
+</LinearLayout>

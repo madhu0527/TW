@@ -1,0 +1,65 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+
+    <style name="AppTheme" parent="AppBaseThem">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!-- for overflow icon on the action bar -->
+        <!-- for removing blackscreen while open the app. -->
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+     <style name="AppThemee" parent="AppBaseThem">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!-- for overflow icon on the action bar -->
+        <!-- for removing blackscreen while open the app. -->
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="MyAppTheme" parent="android:Theme.Holo.Light">
+        <item name="android:homeAsUpIndicator">@drawable/ic_drawer</item>
+        <item name="android:actionOverflowButtonStyle">@style/OverFlow</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light" parent="Base.Theme.AppCompat.Light">
+        <item name="android:actionOverflowButtonStyle">@style/OverFlow</item>
+    </style>
+      <style name="Theme.AppCompat.Light1" parent="Base.Theme.AppCompat.Light">
+        <item name="android:actionOverflowButtonStyle">@style/OverFlow</item>
+         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="AppBaseThem" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- API 14 theme customizations can go here. -->
+        <item name="android:actionOverflowButtonStyle">@style/OverFlow</item>
+    </style>
+
+    <style name="OverFlow" parent="@android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/icon_overflowmenu</item>
+    </style>
+
+    <style name="Widget.ActionButton.Overflow" parent="@android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:contentDescription">@string/app_name</item>
+    </style>
+ <style name="popup_login_dialog_animation">
+        <item name="android:windowEnterAnimation">@anim/bottom_up</item>
+        <item name="android:windowExitAnimation">@anim/bottom_down</item>
+    </style>
+</resources>

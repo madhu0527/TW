@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="teamwave.android.mobile.teamwave">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="19" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <application
+        android:name="mobile.teamwave.application.ApplicationImageLoaderSetup"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/MyAppTheme">
+        <activity
+            android:name="mobile.teamwave.pm_activity.PM_MainActivity"
+            android:label="@string/app_name">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="mobile.teamwave.pm_activity.PM_MainActivity" />
+        </activity>
+        <activity
+            android:name="mobile.teamwave.pm_activity.Login"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="mobile.teamwave.pm_activity.ProjectActivityTaskGroupTabStrip"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light1"></activity>
+        <activity
+            android:name="mobile.teamwave.pm_activity.TasksList"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"></activity>
+        <activity
+            android:name="mobile.teamwave.pm_activity.TaskDetail"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name="mobile.teamwave.pm_activity.MessageDetail"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"></activity>
+        <activity
+            android:name="mobile.teamwave.pm_activity.FileDetail"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"></activity>
+        <activity
+            android:name="mobile.teamwave.pm_activity.NotesDetail"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"></activity>
+        <activity
+            android:name="mobile.teamwave.pm_activity.TimeLogDetail"
+            android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity
+            android:name="mobile.teamwave.pm_activity.EventDetail"
+            android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity
+            android:name="mobile.teamwave.pm_activity.AppHome"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name="mobile.teamwave.pm_activity.FileImageViewer"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name="mobile.teamwave.pm_activity.CalenderEvents"
+            android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity
+            android:name="mobile.teamwave.pm_activity.MultipleFiles"
+            android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity
+            android:name="mobile.teamwave.pm_activity.Profile"
+            android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity
+            android:name="mobile.teamwave.crm_activity.CrmMainActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name="mobile.teamwave.crm_activity.PeopleOrganizationActivity"
+            android:theme="@style/Theme.AppCompat.Light1"></activity>
+        <activity
+            android:name="mobile.teamwave.crm_activity.PeopleActivityDetail"
+            android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity
+            android:name="mobile.teamwave.crm_activity.OrgDetail"
+            android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity
+            android:name="mobile.teamwave.crm_activity.DealDetail"
+            android:theme="@style/Theme.AppCompat.Light"></activity>
+        <activity
+            android:name="mobile.teamwave.crm_activity.ActivityList"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name="mobile.teamwave.crm_activity.AddDeal"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,434 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- The main content view -->
+
+    <LinearLayout
+        android:id="@+id/drawer_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    </LinearLayout>
+    <!-- The navigation drawer -->
+
+    <RelativeLayout
+        android:id="@+id/right_drawer"
+        android:layout_width="270dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="end"
+        android:background="#fff" >
+
+        <!-- total items -->
+
+        <RelativeLayout
+            android:id="@+id/optItems"
+            android:layout_width="match_parent"
+            android:layout_height="220dp" >
+
+            <LinearLayout
+                android:id="@+id/filerLay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#f8f8f8"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <RelativeLayout
+                    android:id="@+id/closeFilter"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:id="@+id/closeImg"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/chooseFilterTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Choose Filter"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                 <com.gc.materialdesign.views.ButtonFlat
+                    android:id="@+id/resetTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="32dp"
+                    android:gravity="center_vertical"
+                    android:text="RESET"
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/usersTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filerLay"
+                android:layout_marginLeft="76dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Users"
+                android:textColor="#c0c0c0"
+                android:textSize="14sp" />
+
+            <com.gc.materialdesign.views.LayoutRipple
+                android:id="@+id/allUsersLay"
+                android:layout_width="270dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/usersTxt"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:state_activated="true" >
+
+
+                <RadioButton
+                    android:id="@+id/allUsersRadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="66dp"
+                    android:gravity="center_vertical"
+                    android:text="All user deals"
+                    android:textSize="17sp" />
+            </com.gc.materialdesign.views.LayoutRipple>
+
+            <com.gc.materialdesign.views.LayoutRipple
+                android:id="@+id/mydealsLay"
+                android:layout_width="270dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/allUsersLay"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:state_activated="true" >
+
+
+                <RadioButton
+                    android:id="@+id/myDealsRadioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="66dp"
+                    android:gravity="center_vertical"
+                    android:text="My deals"
+                    android:textSize="17sp" />
+            </com.gc.materialdesign.views.LayoutRipple>
+
+            <RelativeLayout
+                android:id="@+id/line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.8dp"
+                android:layout_below="@+id/mydealsLay"
+                android:layout_marginTop="5dp"
+                android:background="#ccc"
+                android:orientation="horizontal" >
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/menuItems1List"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/optItems"
+            android:layout_marginTop="5dp"
+            android:background="#fff" >
+
+            <LinearLayout
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/filterTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="76dp"
+                    android:gravity="center_vertical"
+                    android:text="Filter"
+                    android:textColor="#c0c0c0"
+                    android:textSize="14sp" />
+
+                <com.gc.materialdesign.views.LayoutRipple
+                    android:id="@+id/allOpenLay"
+                    android:layout_width="270dp"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:state_activated="true" >
+
+
+                    <RadioButton
+                        android:id="@+id/allOpenDealsBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="66dp"
+                        android:gravity="center_vertical"
+                        android:text="All open deals"
+                        android:textSize="17sp" />
+                </com.gc.materialdesign.views.LayoutRipple>
+
+                <com.gc.materialdesign.views.LayoutRipple
+                    android:id="@+id/allLostLay"
+                    android:layout_width="270dp"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:orientation="horizontal" >
+
+
+                    <RadioButton
+                        android:id="@+id/allLostDealsRadioBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="66dp"
+                        android:gravity="center_vertical"
+                        android:text="All lost deals"
+                        android:textSize="17sp" />
+                </com.gc.materialdesign.views.LayoutRipple>
+
+                <com.gc.materialdesign.views.LayoutRipple
+                    android:id="@+id/allWonLay"
+                    android:layout_width="270dp"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/allWondDealsRadioBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="66dp"
+                        android:gravity="center_vertical"
+                        android:text="All won deals"
+                        android:textSize="17sp" />
+                </com.gc.materialdesign.views.LayoutRipple>
+
+                <com.gc.materialdesign.views.LayoutRipple
+                    android:id="@+id/allRottenLay"
+                    android:layout_width="270dp"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:orientation="horizontal" >
+
+
+                    <RadioButton
+                        android:id="@+id/allRottenDealsRadioBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="66dp"
+                        android:gravity="center_vertical"
+                        android:text="Rotten deals"
+                        android:textSize="17sp" />
+                </com.gc.materialdesign.views.LayoutRipple>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/left_drawer"
+        android:layout_width="270dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="start"
+        android:background="#fff" >
+
+        <!-- total items -->
+
+        <RelativeLayout
+            android:id="@+id/tot_drawer"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start" >
+
+            <RelativeLayout
+                android:id="@+id/topBar"
+                android:layout_width="match_parent"
+                android:layout_height="158dp"
+                android:layout_gravity="start"
+                android:background="@drawable/drawerbg" >
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="12dp" />
+
+                <ImageView
+                    android:id="@+id/homeScreenImg"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/logo"
+                    android:layout_marginTop="40dp"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/crmTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logo"
+                    android:layout_marginTop="44dp"
+                    android:layout_toRightOf="@+id/homeScreenImg"
+                    android:paddingLeft="12dp"
+                    android:text="/ CRM"
+                    android:textColor="#3A3D44"
+                    android:textSize="18sp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/menuItemsList"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topBar"
+                android:background="#fff" >
+
+                <LinearLayout
+                    android:id="@+id/all"
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <View
+                        android:id="@+id/space"
+                        android:layout_width="270dp"
+                        android:layout_height="7dp"
+                        android:background="#fff" />
+
+                    <com.gc.materialdesign.views.LayoutRipple
+                        android:id="@+id/dealsLay"
+                        android:layout_width="270dp"
+                        android:layout_height="50dp"
+                        android:clickable="true"
+                        android:orientation="horizontal"
+                        android:state_activated="true" >
+
+                        <ImageView
+                            android:id="@+id/dealsImg"
+                            android:layout_width="32dp"
+                            android:layout_height="26dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12.5dp" />
+
+                        <TextView
+                            android:id="@+id/dealsTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="76dp"
+                            android:gravity="center_vertical"
+                            android:text="Deals"
+                            android:textSize="17sp" />
+                    </com.gc.materialdesign.views.LayoutRipple>
+
+                    <com.gc.materialdesign.views.LayoutRipple
+                        android:id="@+id/activityLay"
+                        android:layout_width="270dp"
+                        android:layout_height="50dp"
+                        android:clickable="true"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/calenderImg"
+                            android:layout_width="29dp"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12.5dp" />
+
+                        <TextView
+                            android:id="@+id/calenderTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="76dp"
+                            android:gravity="center_vertical"
+                            android:text="Activities"
+                            android:textSize="17sp" />
+                    </com.gc.materialdesign.views.LayoutRipple>
+
+                    <com.gc.materialdesign.views.LayoutRipple
+                        android:id="@+id/contactsLay"
+                        android:layout_width="270dp"
+                        android:layout_height="50dp"
+                        android:clickable="true"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/peopleImg"
+                            android:layout_width="29dp"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12.5dp" />
+
+                        <TextView
+                            android:id="@+id/peopleTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="76dp"
+                            android:gravity="center_vertical"
+                            android:text="Contacts"
+                            android:textSize="17sp" />
+                    </com.gc.materialdesign.views.LayoutRipple>
+
+                  <!--   <com.gc.materialdesign.views.LayoutRipple
+                        android:id="@+id/orgLay"
+                        android:layout_width="270dp"
+                        android:layout_height="50dp"
+                        android:clickable="true"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/orgImg"
+                            android:layout_width="29dp"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12.5dp" />
+
+                        <TextView
+                            android:id="@+id/orgTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="76dp"
+                            android:gravity="center_vertical"
+                            android:text="Organizations"
+                            android:textSize="17sp" />
+                    </com.gc.materialdesign.views.LayoutRipple>
+ -->
+                    <com.gc.materialdesign.views.LayoutRipple
+                        android:id="@+id/settingsLay"
+                        android:layout_width="270dp"
+                        android:layout_height="50dp"
+                        android:clickable="true"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/settingsImg"
+                            android:layout_width="29dp"
+                            android:layout_height="24dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="12.5dp" />
+
+                        <TextView
+                            android:id="@+id/settingsTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="76dp"
+                            android:gravity="center_vertical"
+                            android:text="Settings"
+                            android:textSize="17sp" />
+                    </com.gc.materialdesign.views.LayoutRipple>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

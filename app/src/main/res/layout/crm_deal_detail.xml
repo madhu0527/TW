@@ -1,0 +1,210 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff" >
+
+    <RelativeLayout
+        android:id="@+id/detailsLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/dealNameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Deal Name"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dealNameTxt"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/personImg"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_contact" />
+
+            <TextView
+                android:id="@+id/contactNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Deal Name"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/orgImg"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_org" />
+
+            <TextView
+                android:id="@+id/orgNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Org Name"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/detailsLay"
+        android:background="#E1F9EB" />
+
+    <LinearLayout
+        android:id="@+id/indexLay"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/pager"
+        android:background="#E1F9EB"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="6" >
+
+        <LinearLayout
+            android:id="@+id/lay1"
+            android:layout_width="50dp"
+            android:layout_height="10dp"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#C1EECF"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay2"
+            android:layout_width="50dp"
+            android:layout_height="10dp"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#C1EECF"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay3"
+            android:layout_width="50dp"
+            android:layout_height="10dp"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#C1EECF"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay4"
+            android:layout_width="50dp"
+            android:layout_height="10dp"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#C1EECF"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay5"
+            android:layout_width="50dp"
+            android:layout_height="10dp"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#C1EECF"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay6"
+            android:layout_width="50dp"
+            android:layout_height="10dp"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#C1EECF"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay7"
+            android:layout_width="50dp"
+            android:layout_height="10dp"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:background="#C1EECF"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wonLostLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/indexLay"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/dealPriceTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:text="Rs250"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/wonBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="60dp"
+            android:background="#43C35E"
+            android:src="@drawable/ic_org"
+            android:text="Won"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/lostBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="#E84646"
+            android:text="Lost"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <mobile.teamwave.design.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:layout_below="@+id/wonLostLay"
+        android:layout_marginTop="10dp"
+        android:background="#fff" >
+    </mobile.teamwave.design.PagerSlidingTabStrip>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pagerTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabs"
+        android:background="#fff" />
+
+</RelativeLayout>

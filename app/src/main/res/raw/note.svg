@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="79px" height="79px" viewBox="0 0 79 79" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 112 + Rectangle 136 + Line Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.25" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.833413053   0 0 0 0 0.784519241   0 0 0 0 0.629959511  0 0 0 0.414574841 0" in="shadowBlurOuter1" type="matrix" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Rectangle-112-+-Rectangle-136-+-Line-Copy-2" sketch:type="MSLayerGroup">
+            <path d="M0,4.99790642 C0,2.23763892 2.22946192,0 4.99790642,0 L73.0020936,0 C75.7623611,0 78,2.23956692 78,5.00024688 L78,57.5083853 C78,58.0555989 77.6815169,58.8214059 77.2911083,59.2163742 L59.4332187,77.282829 C59.0417086,77.6789116 58.2854036,78 57.7296962,78 L5.00680309,78 C2.2416221,78 0,75.7705381 0,73.0020936 L0,4.99790642 Z" id="Rectangle-112" fill="#F4E8B8" sketch:type="MSShapeGroup"></path>
+            <path d="M58.5,78 L58.5,63.4964125 C58.5,60.7369701 60.7368979,58.5 63.4964125,58.5 L78,58.5 L58.5,78 Z" id="Rectangle-136" fill="#DFD29E" filter="url(#filter-1)" sketch:type="MSShapeGroup"></path>
+            <path d="M1,13.40625 L77,13.40625" id="Line-Copy" stroke-opacity="0.592249774" stroke="#D5C8A1" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

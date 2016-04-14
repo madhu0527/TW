@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:float="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fff"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/actionbar_shadow"
+        android:gravity="center|left"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/backImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/newDocument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Event"
+            android:textSize="18sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/addEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:padding="8dp"
+            android:text="Save"
+            android:textColor="#4169E1"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/topBar" >
+
+        <LinearLayout
+            android:id="@+id/eventLay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:paddingBottom="30dp" >
+
+            <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                android:id="@+id/titleEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                float:fletPadding="5dp" >
+
+                <EditText
+                    android:id="@+id/eventTitleEdit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="Event title"
+                    android:singleLine="true" />
+            </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+            <RelativeLayout
+                android:id="@+id/line1"
+                android:layout_width="fill_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="5dp"
+                android:background="#ccc"
+                android:orientation="horizontal" >
+            </RelativeLayout>
+
+            <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                android:id="@+id/discEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                float:fletPadding="5dp" >
+
+                <EditText
+                    android:id="@+id/eventDiscEdit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="Event discription"
+                    android:singleLine="false" />
+            </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+            <RelativeLayout
+                android:id="@+id/line2"
+                android:layout_width="fill_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="5dp"
+                android:background="#ccc"
+                android:orientation="horizontal" >
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/startTymTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="Start time"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/startTym"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                 android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/eventbtns"
+                android:padding="10dp"
+                android:text="Start time"
+                android:textColor="#4169E1" />
+
+            <TextView
+                android:id="@+id/startDatext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Start date"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/startDate"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                 android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/eventbtns"
+                android:padding="10dp"
+                android:text="Start date"
+                android:textColor="#4169E1" />
+
+            <TextView
+                android:id="@+id/endTymTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="End time"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/endTym"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                 android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/eventbtns"
+                android:padding="10dp"
+                android:text="End time"
+                android:textColor="#4169E1" />
+
+            <TextView
+                android:id="@+id/endDateTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="End date"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/endDate"
+                android:layout_width="fill_parent"
+                android:layout_height="55dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/eventbtns"
+                android:padding="10dp"
+                android:text="End date"
+                android:textColor="#4169E1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <com.gc.materialdesign.views.CheckBox
+                        android:id="@+id/checkBoxAllDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#1E88E5" />
+
+                    <TextView
+                        android:id="@+id/allDayTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="All day"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <com.gc.materialdesign.views.CheckBox
+                        android:id="@+id/checkBoxRepeatTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#1E88E5" />
+
+                    <TextView
+                        android:id="@+id/allRepeatTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:text="Repeat"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/repeatsLay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone" >
+
+                <Spinner
+                    android:id="@+id/repeatSpin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:spinnerMode="dialog" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/repeatsEndLay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone" >
+
+                <Spinner
+                    android:id="@+id/repeatEndSpin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:spinnerMode="dialog" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/occurLay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                    android:id="@+id/occurEditt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    float:fletPadding="5dp" >
+
+                    <EditText
+                        android:id="@+id/occurEdit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:hint="time(s)"
+                        android:inputType="phone"
+                        android:singleLine="true" />
+                </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                <RelativeLayout
+                    android:id="@+id/line5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ccc"
+                    android:orientation="horizontal" >
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dateoccLay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <com.wrapp.floatlabelededittext.FloatLabeledEditText
+                    android:id="@+id/dateoccditt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    float:fletPadding="5dp" >
+
+                    <EditText
+                        android:id="@+id/dateoccEdit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00000000"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:hint="Repeat end date"
+                        android:inputType="phone"
+                        android:singleLine="true" />
+                </com.wrapp.floatlabelededittext.FloatLabeledEditText>
+
+                <RelativeLayout
+                    android:id="@+id/line6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#ccc"
+                    android:orientation="horizontal" >
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/sendEmilNotiTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="5dp"
+                android:text="SEND EMAIL NOTIFICATION TO"
+                android:textSize="14sp" />
+
+            <Spinner
+                android:id="@+id/notAssiSpin"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:spinnerMode="dialog" />
+
+            <!--
+            <RelativeLayout
+                android:id="@+id/line3"
+                android:layout_width="fill_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="5dp"
+                android:background="#ccc"
+                android:orientation="horizontal" >
+            </RelativeLayout>
+            -->
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

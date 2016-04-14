@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="#fff" >
+
+    <RelativeLayout
+        android:id="@+id/filesLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/fileImg"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/fileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/fileImg"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/fileImg"
+            android:padding="3dp"
+            android:text="My new notes"
+            android:textColor="#343740"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/byTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fileTitle"
+            android:layout_below="@+id/fileTitle"
+            android:padding="2dp"
+            android:text="by"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#8B92A2" />
+
+        <TextView
+            android:id="@+id/dateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/byTxt"
+            android:layout_alignRight="@+id/createdByTxt"
+            android:layout_below="@+id/byTxt"
+            android:layout_marginTop="5dp"
+            android:padding="3dp"
+            android:text="Frid,Aug 15"
+            android:textColor="#A4A8B1"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/createdByTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/byTxt"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/byTxt"
+            android:padding="2dp"
+            android:text="Madhu"
+            android:textColor="#3A3D44"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/cmntCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="2dp"
+            android:text="5"
+             android:layout_alignTop="@+id/dateTxt"
+            android:textColor="#5B677D"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/fileSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/fileTitle"
+            android:layout_alignBottom="@+id/fileTitle"
+            android:layout_toRightOf="@+id/fileTitle"
+            android:text=" 12KB"
+            android:textColor="#c0c0c0"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/comntImg"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignTop="@+id/dateTxt"
+            android:layout_toLeftOf="@+id/cmntCount"
+            android:src="@drawable/ic_launcher" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

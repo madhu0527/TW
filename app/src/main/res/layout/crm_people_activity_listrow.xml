@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layPlaned"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/taskDetailLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/checkBoxView"
+        android:paddingBottom="5dp" >
+
+        <TextView
+            android:id="@+id/tasksName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Email"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#343740" />
+
+        <TextView
+            android:id="@+id/dateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/createdByTxt"
+            android:layout_alignBottom="@+id/createdByTxt"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/createdByTxt"
+            android:text="Aug 15th"
+            android:textColor="#A4A8B1"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/createdByTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tasksName"
+            android:text="Madhu"
+            android:textColor="#A4A8B1"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/checkBoxView1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center" >
+
+            <com.gc.materialdesign.views.CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/checkBoxView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/emailImg"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_back"
+            android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

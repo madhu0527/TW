@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dealClickLay"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+   <TextView
+            android:id="@+id/stageNameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Stage Name"
+            android:textColor="#353841"
+            android:textSize="16sp" />
+
+       <ListView
+           android:id="@+id/listviewDeals"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:layout_gravity="left|start"
+           android:background="#ffeeeeee"
+           android:cacheColorHint="@android:color/transparent"
+           android:divider="#ccc"
+           android:dividerHeight="0.5dp" />
+
+</LinearLayout>

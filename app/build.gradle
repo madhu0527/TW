@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    useLibrary  'org.apache.http.legacy'
+    packagingOptions {
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/NOTICE'
+    }
+    defaultConfig {
+        applicationId "teamwave.android.mobile.teamwave"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile files('libs/svg-android-1.1.jar')
+    compile 'com.android.support:recyclerview-v7:+'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.google.code.gson:gson:2.2.+'
+    compile group: 'org.apache.httpcomponents', name: 'httpclient-android', version: '4.3.5'
+    compile 'org.apache.httpcomponents:httpmime:4.3.5'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.wrapp.floatlabelededittext:library:0.0.6'
+    compile 'com.github.navasmdc:MaterialDesign:1.5@aar'
+    compile('com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE')
+    compile 'com.github.JakeWharton:ViewPagerIndicator:2.4.1@aar'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+
+}

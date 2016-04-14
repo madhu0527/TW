@@ -1,0 +1,84 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/taksListScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F5F4" >
+
+    <RelativeLayout
+        android:id="@+id/lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/PlannedLay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/taskgrpName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Planned"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/planedLay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/PlannedLay" >
+
+            <mobile.teamwave.design.NestedListView
+                android:id="@+id/planedListview"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:divider="@null"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000" >
+            </mobile.teamwave.design.NestedListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pastLayy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/planedLay"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:visibility="visible" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Past"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/compltd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pastLayy" >
+
+            <mobile.teamwave.design.NestedListView
+                android:id="@+id/pastListview"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000" >
+            </mobile.teamwave.design.NestedListView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

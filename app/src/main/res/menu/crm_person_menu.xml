@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <!-- Search / will display always -->
+    <item
+        android:id="@+id/call"
+        android:icon="@drawable/phone"
+        android:orderInCategory="0"
+        android:title="Call"
+        app:showAsAction="always"/>
+
+    <!-- Location Found -->
+    <item
+        android:id="@+id/email"
+        android:icon="@drawable/email"
+        android:orderInCategory="0"
+        android:title="Email"
+        app:showAsAction="always"/>
+
+<!--     Refresh
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/phone"
+        android:showAsAction="ifRoom"
+        android:title="Edit"/>
+ -->
+</menu>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/notesLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FEFFDD"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/notesImg"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            />
+
+        <TextView
+            android:id="@+id/titleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/notesImg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/notesImg"
+            android:text="My new notes"
+            android:textColor="#2C3017"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/lay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleTxt"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/notesImg"
+            android:gravity="center|left"
+            android:orientation="horizontal"
+            android:paddingBottom="3dp" >
+
+            <TextView
+                android:id="@+id/byTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Dec 10,2015"
+                android:textColor="#767862"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/createdByTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Madhu"
+                android:textColor="#737462"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/dateTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Double spring"
+                android:textColor="#7A7A62"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/flesLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/notesLay"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/fileTypeImg"
+            android:layout_width="38dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            />
+
+        <TextView
+            android:id="@+id/filecreatedTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/fileTypeImg"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/fileTypeImg"
+            android:text="Madhu uploaded a file"
+            android:textColor="#343740"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/fileTitleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/filecreatedTxt"
+            android:layout_below="@+id/filecreatedTxt"
+            android:layout_marginTop="3dp"
+            android:text="File name.jpeg"
+            android:textColor="#3A3D44"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/filedateeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fileTitleTxt"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/fileTitleTxt"
+            android:layout_marginTop="3dp"
+            android:text="Dec 10,2015"
+            android:textColor="#8B92A2"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/activityLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flesLay"
+        android:background="#FFF"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/activtyImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+         />
+
+        <TextView
+            android:id="@+id/activitytitleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/activtyImg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/activtyImg"
+            android:text="Email"
+            android:textColor="#2C3017"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:id="@+id/layy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/activitytitleTxt"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/activtyImg"
+            android:gravity="center|left"
+            android:orientation="horizontal"
+            android:paddingBottom="3dp" >
+
+            <TextView
+                android:id="@+id/activtyDateTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Dec 10,2015"
+                android:textColor="#767862"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/actcreatedByTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Madhu"
+                android:textColor="#737462"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center" >
+
+            <com.gc.materialdesign.views.CheckBox
+                android:id="@+id/activtyCheck"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

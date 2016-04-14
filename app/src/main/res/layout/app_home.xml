@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/actionbar_shadow" >
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="6dp"
+            android:src="@drawable/app_icon" />
+
+        <mobile.teamwave.design.RoundedImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/profilepic"
+            android:scaleType="centerInside" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progLay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp" >
+
+        <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+            android:id="@+id/pDialog"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:mlpb_enable_circle_background="true"
+            app:mlpb_progress_stoke_width="4dp"
+            app:mlpb_progress_text_visibility="invisible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/prosLay"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/topBar"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:state_activated="true" >
+
+        <ImageView
+            android:id="@+id/prosImg"
+            android:layout_width="29dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12.5dp" />
+
+        <TextView
+            android:id="@+id/prosTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:gravity="center_vertical"
+            android:text="Projects"
+            android:textColor="#353841"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/crmLay"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/prosLay"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/crmImg"
+            android:layout_width="29dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12.5dp" />
+
+        <TextView
+            android:id="@+id/crmTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:gravity="center_vertical"
+            android:text="CRM"
+            android:textColor="#353841"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hrmLay"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/crmLay"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/hrmImg"
+            android:layout_width="29dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12.5dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/hrmTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:gravity="center_vertical"
+            android:text="HRM"
+            android:textColor="#353841"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/invoiceLay"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/hrmLay"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/invoiceImg"
+            android:layout_width="29dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12.5dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/invoiceTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:gravity="center_vertical"
+            android:text="Invoice"
+            android:textColor="#353841"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/marketingLay"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/invoiceLay"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/marketingImg"
+            android:layout_width="29dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12.5dp" />
+
+        <TextView
+            android:id="@+id/marketingTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:gravity="center_vertical"
+            android:text="Marketing Automation"
+            android:textColor="#353841"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reportsLay"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/marketingLay"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/reportsImg"
+            android:layout_width="29dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12.5dp" />
+
+        <TextView
+            android:id="@+id/reportsTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:gravity="center_vertical"
+            android:text="Reports"
+            android:textColor="#353841"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</RelativeLayout>
